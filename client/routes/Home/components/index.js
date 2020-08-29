@@ -1,7 +1,7 @@
 import React from 'react';
 import { useData } from 'react-isomorphic-data';
 import { Link } from 'react-router-dom';
-
+import LazyImage from '../../../components/LazyImage';
 import Header from '../../../components/Header';
 import RatingReview from '../../../components/RatingReview';
 import Footer from '../../../components/Footer';
@@ -68,7 +68,7 @@ function Home() {
           <div className="products" style={productWrapper}>
             {data.data.map(item => (
               <Link className="product" style={productCard} key={item.id} to={`/${item.id}`}>
-                <img className="product__img" style={productImg} src={getResizedImage(item.image)} alt={item.name}></img>
+                <LazyImage style={productImg} src={getResizedImage(item.image)} alt={item.name}/>
                 <div style={productInfo}>
                   <div style={productName}>{item.name}</div>
                   <div style={productPrice}>{item.price}</div>
