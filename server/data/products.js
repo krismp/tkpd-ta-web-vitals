@@ -4,7 +4,7 @@ const createProduct = (id, name, price, review, rating, imageIndex) => {
   return {
     id,
     name,
-    image: `${PUBLIC_PATH}/images/product-${imageIndex}.jpg`,
+    image: `${PUBLIC_PATH}/images/product-${imageIndex}.jpeg`,
     price,
     review,
     rating,
